@@ -1,0 +1,17 @@
+<h2>Listas</h2>
+<div>
+  <input type="text" placeholder="Ingrese texto aqui" name="newList" [(ngModel)]="newList.name">
+  <button (click)="Agregar()">Agregar</button>
+</div>
+
+<div>
+  <label for="">Cantidad: {{list.length}}</label>
+  <ng-container *ngFor="let item of list">
+    <div>
+      <span>{{item.name}}</span>
+      <a (click)="Eliminar(item)">Eliminar</a>
+    </div>
+  </ng-container>
+
+</div>
+
